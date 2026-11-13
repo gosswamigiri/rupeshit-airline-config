@@ -1,0 +1,25 @@
+server:
+  port: 5006
+spring:
+  application:
+    name: seat-service
+
+  datasource:
+    url: ${SEAT_DB_URL:jdbc:mysql://localhost:3306/airline_seat_db?createDatabaseIfNotExist=true}
+    username: ${SEAT_DB_USERNAME}
+    password: ${SEAT_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: seat-service-group
+      auto-offset-reset: earliest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka/}
+  instance:
+    prefer-ip-address: true
