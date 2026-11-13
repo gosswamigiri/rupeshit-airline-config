@@ -1,5 +1,6 @@
 server:
   port: 5002
+spring:
   datasource:
     url: ${AIRLINE_CORE_DB_URL:jdbc:mysql://localhost:3306/airline_core_db?createDatabaseIfNotExist=true}
     username: ${AIRLINE_CORE_DB_USERNAME:airline_core_user}
