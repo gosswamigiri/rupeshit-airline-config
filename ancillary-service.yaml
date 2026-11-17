@@ -1,0 +1,7 @@
+server:
+  port: 5007
+
+  datasource:
+    url: ${ANCILLARY_DB_URL:}
+    username: ${ANCILLARY_DB_USERNAME:}
+    password: ${ANCILLARY_DB_PASSWORD:}

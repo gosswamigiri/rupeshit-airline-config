@@ -1,0 +1,8 @@
+server:
+  port: 5005
+
+spring:
+  datasource:
+    url: ${PRICING_DB_URL:}
+    username: ${PRICING_DB_USERNAME:}
+    password: ${PRICING_DB_PASSWORD:}

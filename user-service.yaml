@@ -1,0 +1,14 @@
+server:
+  port: 5001
+spring:
+  datasource:
+    url: ${USER_DB_URL:}
+    username: ${USER_DB_USERNAME:}
+    password: ${USER_DB_PASSWORD:}
+
+app:
+  bootstrap-admin:
+    enabled: ${APP_BOOTSTRAP_ADMIN_ENABLED:false}
+    email: ${APP_BOOTSTRAP_ADMIN_EMAIL:}
+    password: ${APP_BOOTSTRAP_ADMIN_PASSWORD:}
+    full-name: ${APP_BOOTSTRAP_ADMIN_FULL_NAME:Administrator}

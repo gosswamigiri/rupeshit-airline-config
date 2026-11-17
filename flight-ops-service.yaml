@@ -1,0 +1,11 @@
+server:
+  port: 5004
+
+spring:
+  datasource:
+    url: ${FLIGHT_OPS_DB_URL:}
+    username: ${FLIGHT_OPS_DB_USERNAME:}
+    password: ${FLIGHT_OPS_DB_PASSWORD:}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:}
+

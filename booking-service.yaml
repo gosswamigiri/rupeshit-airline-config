@@ -1,0 +1,13 @@
+server:
+  port: 5008
+spring:
+  datasource:
+    url: ${BOOKING_DB_URL:}
+    username: ${BOOKING_DB_USERNAME:}
+    password: ${BOOKING_DB_PASSWORD:}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:}
+    consumer:
+      group-id: ${BOOKING_SERVICE_KAFKA_CONSUMER_GROUP_ID:}
+      auto-offset-reset: earliest
+
